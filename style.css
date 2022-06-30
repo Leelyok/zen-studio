@@ -197,6 +197,65 @@ footer p {
     border-top-right-radius: 20rem;
 }
 
+/* for test NUMEROLOGY  */
+
+body {
+    background-image: url('https://raw.githubusercontent.com/Deepak5j/WebImages/master/Tiles/Black_and_Blue_Background_Wallpaper_8z5fg.jpg');
+    background-repeat: repeat-x repeat-x;
+    
+  }
+
+h1 {
+    color: #0f0;
+    text-shadow: 2px 2px 1px #f00;
+    text-align: center;
+    font-family: 'Verdana';
+    font-size: 30px
+}
+.mm {
+    color:#22f9ee;
+    text-shadow: 2px 2px 1px #f00;
+    text-align: justify;
+    font-family: 'Segoe UI';
+    font-size: 17px
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    color: #0f0;
+}
+td {
+    color: #0000ff;
+    text-shadow: 2px 2px 1px #f00;
+    font-family: 'Verdana';
+    font-size: 17px
+}
+.a, .b, .c, .d, .e, .f, .g, .h, .i {
+    display: none;
+    color: #ffff00;
+    text-shadow: 2px 2px 1px #ff0000;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+    text-align: justify;
+}
+.btn {
+  padding: 15px 25px;
+  font-size: 15px;
+  outline: none;
+  color: #040;
+  background-color: #0ff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #f00;
+  font-weight: bold;
+}
+.btn:active {
+  background-color: #0ff;
+  box-shadow: 0 5px #0ff;
+  transform: translateY(4px);
+}
+
 
 /*@media (max-width: 36em)	Max 576px	_xs-*
 @media (max-width: 48em)	Max 768px	_sm-*
