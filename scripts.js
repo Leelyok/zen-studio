@@ -1,7 +1,7 @@
 function calculate() {
     var x = document.getElementById("dob").value;
     if(x==="")
-        alert("Select Your Date of Birth");
+        alert("Введите дату рождения");
     else
     {
         //alert("Date: "+x);
