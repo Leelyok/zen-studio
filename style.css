@@ -167,6 +167,18 @@ footer p {
     font-size: 0.8rem;
 }
 
+.emphasis {
+    padding: 1rem;
+    border: 2px solid;
+    display: inline-block;
+}
+
+.emphasis.active {
+    color: red;
+}
+.hide {
+    display: none;
+}
 
 /* Images & Background Images */
 
