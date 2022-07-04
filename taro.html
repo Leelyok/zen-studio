@@ -1510,8 +1510,11 @@
             var day = $("#date").val();
             var month = $("#month").val();
             var year = $("#year").val();
-            data = programm1(day, month, year);
+
+            // if statement
             
+            data = programm1(day, month, year);
+        
             if (day != 0 && month != 0 && year != 0){
                 document.getElementById('infodata' ).style.display = 'block';
                 status = 1;
