@@ -1999,15 +1999,22 @@ a5 = data1[4] + data2[4];
         var day2 = $("#date2").val();
         var month2 = $("#month2").val();
         var year2 = $("#year2").val();
+       
         // if statement
-                    
-        
-        if ($("#prognoz-month").hasClass('red')){
+
+
+        if ($("#prognoz-month").hasClass('red')||$("#prognoz-year").hasClass('red')){
            var day2 = 22;
         } else {
             var day2 = $("#date2").val();
         }
-        
+
+        if ($("#prognoz-year").hasClass('red')){
+            var month2 = 22;
+        } else {
+            var month2 = $("#month2").val();
+        }
+
 
         data2 = programm1(day2,month2,year2);
 
