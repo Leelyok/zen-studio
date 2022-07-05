@@ -2375,6 +2375,33 @@ a5 = data4[4] + data5[4];
         data_html[21] = '<a href="#XXI" data-toggle="modal"><img id="photo21" class="img-fluid rounded" src="/images/21.jpg" alt="" width="20"><p id="rimskie" class="mt-0 mb-0 arkan-mnogo">XXI</p></a>';
         data_html[22] = '<a href="#XXII" data-toggle="modal"><img id="photo22" class="img-fluid rounded" src="/images/22.jpg" alt="" width="20"><p id="rimskie" class="mt-0 mb-0 arkan-mnogo">XXII</p></a>';
     
+         // кнопки На месяц и На год
+         $(document).ready(function() {
+        $('#prognoz-month').click(function() {
+            $(this).toggleClass('red');
+            $('#prognoz-year').fadeToggle();
+            var disabled = $("#date3").attr('disabled');
+            if (disabled === undefined) {
+                $("#date3").attr('disabled', 'disabled');
+            }
+            else {
+                $("#date3").removeAttr('disabled');
+            }
+        })
+
+        $('#prognoz-year').click(function() {
+            $(this).toggleClass('red');
+            $('#prognoz-month').fadeToggle();
+            var disabled = $("#date3,#month3").attr('disabled');
+            if (disabled === undefined) {
+                $("#date3,#month3").attr('disabled', 'disabled');
+            }
+            else {
+                $("#date3,#month3").removeAttr('disabled');
+            }
+        })
+    });
+
 
         $("#proga_4").click( function() {
 
@@ -2398,6 +2425,25 @@ a5 = data4[4] + data5[4];
         var day3 = $("#date3").val();
         var month3 = $("#month3").val();
         var year3 = $("#year3").val();
+
+         // Задаем значения при прогнозе на месяц или год
+
+         if ($("#prognoz-month").hasClass('red')||$("#prognoz-year").hasClass('red')){
+           var day3 = $("#date3").val(22);
+           var day3 = 22;
+        } else {
+            var day3 = $("#date3").val();
+        }
+
+        if ($("#prognoz-year").hasClass('red')){
+            var month3 = $("#month3").val(22);
+            var month3 = 22;
+        } else {
+            var month3 = $("#month3").val();
+        }
+
+        //end
+
         data3 = programm1(day3,month3,year3);
     
 
@@ -2484,19 +2530,6 @@ a5 = data4[4] + data5[4];
             } while (i < 25);
 
         });
-
-        // кнопки На месяц и На год
-        $('#prognoz-month').click(function(){
-            $(this).toggleClass('red');
-            $('#date3').fadeToggle();
-        });
-
-        $('#prognoz-year').click(function(){
-            $(this).toggleClass('red');
-            $('#date3,#month3').fadeToggle();
-        });
-        // end 
-
 
         document.addEventListener('DOMContentLoaded', function () {
             var checkbox = document.querySelector('input[type="checkbox"]');
