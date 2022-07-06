@@ -1494,12 +1494,13 @@
         document.getElementById('infodata' ).style.display = 'none';
 
         
-        // Если поля День или Месяц в Срок Прогноза пустые
+        /*Если поля День или Месяц в Срок Прогноза пустые
         $('#proga_4').click(function(){
             if( !$('#date3').val()||( !$('#month3').val() ) ) {
             alert('Пожалуйста, заполните все поля');
             }
         });
+        */
 
         function programm1(day,month,year) {
             // day = $("#date").value();
@@ -2484,7 +2485,7 @@ a5 = data4[4] + data5[4];
         // data6[] = массив с данными композит прогноз 1 и прогноз 2
 
 
-        if (day1 != 0 && month1 != 0 && year1 != 0){
+        if (day1 != 0 && month1 != 0 && year1 != 0 && day3 != '' && month3 != '' && year3 != 0 && day2 != 0 && month2 != 0 && year2 != 0){
                 document.getElementById('infodata' ).style.display = 'block';
                 // document.getElementById('infodata2' ).style.display = 'block';
                 status = 1;
